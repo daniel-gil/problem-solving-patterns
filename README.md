@@ -4,7 +4,7 @@ Problem-solving patterns are reusable templates or strategies used to solve clas
 ## The core patterns
 | Priority | Pattern                              | Typical clue in the problem                                          | Typical complexity      |
 | -------: | ------------------------------------ | -------------------------------------------------------------------- | ----------------------- |
-|     🥇 1 | **Hash Map / Hash Set**              | "seen before", duplicates, frequency, find a pair, grouping          | O(n)                    |
+|     🥇 1 | **[Hash Map / Hash Set](https://github.com/daniel-gil/problem-solving-patterns/tree/main/patterns/hash)**              | "seen before", duplicates, frequency, find a pair, grouping          | O(n)                    |
 |     🥇 2 | **Two Pointers**                     | sorted array, pair, palindrome, compare from both ends               | O(n)                    |
 |     🥇 3 | **Sliding Window**                   | contiguous substring/subarray, longest/shortest, "at most K"         | O(n)                    |
 |     🥇 4 | **Binary Search**                    | sorted data, find position/boundary, minimum/maximum possible value  | O(log n) or O(n log n)  |
