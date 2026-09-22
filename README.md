@@ -1,7 +1,7 @@
 # Problem Solving Patterns
 Problem-solving patterns are reusable templates or strategies used to solve classes of similar, recurring problems efficiently.
 
-🧠 The core patterns
+## The core patterns
 | Priority | Pattern                              | Typical clue in the problem                                          | Typical complexity      |
 | -------: | ------------------------------------ | -------------------------------------------------------------------- | ----------------------- |
 |     🥇 1 | **Hash Map / Hash Set**              | "seen before", duplicates, frequency, find a pair, grouping          | O(n)                    |
@@ -23,6 +23,72 @@ Problem-solving patterns are reusable templates or strategies used to solve clas
 |    🥉 17 | **Dijkstra**                         | shortest path with weighted edges                                    | O((V + E) log V)        |
 |    🥉 18 | **Trie**                             | prefixes, autocomplete, dictionary/string prefix search              | O(length)               |
 
+## The complete problem-solving flow
+```
+┌──────────────────────────────────────────────┐
+│              READ THE PROBLEM                │
+└───────────────────────┬──────────────────────┘
+                        ↓
+┌──────────────────────────────────────────────┐
+│ 1. WHAT IS THE DATA STRUCTURE?               │
+│                                              │
+│ Array / String / Linked List / Tree / Graph  │
+│ Grid / Matrix / Other                        │
+└───────────────────────┬──────────────────────┘
+                        ↓
+┌──────────────────────────────────────────────┐
+│ 2. WHAT ARE THEY ASKING FOR?                 │
+│                                              │
+│ Find / Check / Count / Min / Max / Generate  │
+│ Shortest / Longest / Frequency / Ordering    │
+└───────────────────────┬──────────────────────┘
+                        ↓
+┌──────────────────────────────────────────────┐
+│ 3. WHAT WORDS/CONCEPTS ARE CLUES?            │
+│                                              │
+│ sorted? contiguous? pair? top K?             │
+│ dependency? connected? prefix?               │
+│ next greater? shortest path?                 │
+│ all combinations? repeated subproblems?      │
+└───────────────────────┬──────────────────────┘
+                        ↓
+┌──────────────────────────────────────────────┐
+│ 4. WHAT PATTERN DOES THAT SUGGEST?           │
+│                                              │
+│ Hash Map       Two Pointers   Sliding Window │
+│ Binary Search  Stack          DFS/BFS        │
+│ Heap           Prefix Sum     Backtracking   │
+│ Greedy         DP             Graph          │
+│ Union-Find     etc.                          │
+└───────────────────────┬──────────────────────┘
+                        ↓
+┌──────────────────────────────────────────────┐
+│ 5. WHY DOES BRUTE FORCE FAIL?                │
+│                                              │
+│ Identify the repeated work / bottleneck.     │
+└───────────────────────┬──────────────────────┘
+                        ↓
+┌──────────────────────────────────────────────┐
+│ 6. CHECK CONSTRAINTS                         │
+│                                              │
+│ Can O(n²) work? O(2ⁿ)? Need O(n log n)?      │
+└───────────────────────┬──────────────────────┘
+                        ↓
+┌──────────────────────────────────────────────┐
+│ 7. IMPLEMENT THE KNOWN TEMPLATE              │
+│                                              │
+│ C# Dictionary / HashSet / Queue / Stack      │
+│ PriorityQueue / recursion / sorting / etc.   │
+└───────────────────────┬──────────────────────┘
+                        ↓
+┌──────────────────────────────────────────────┐
+│ 8. VERIFY                                    │
+│                                              │
+│ Edge cases + time complexity + space         │
+└──────────────────────────────────────────────┘
+```
+
+## Universal pattern-recognition model
 
 ```
                          ┌─────────────────────┐
