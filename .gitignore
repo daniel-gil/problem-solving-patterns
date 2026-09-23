@@ -1,0 +1,7 @@
+# JetBrains Rider / IDE project files
+.idea/
+
+# Rider / .NET user-specific files (in case they show up at the repo root)
+*.suo
+*.user
+*.sln.iml
