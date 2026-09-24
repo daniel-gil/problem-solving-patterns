@@ -62,6 +62,11 @@ public class DynamicWindowExample
 
 **Problem**: Find the maximum sum of any contiguous subarray of size $k$.
 
+
+### Using Two Sequential Loops
+Separates the initialization phase (building the first window) from the sliding phase. It requires zero if checks inside the loop, making it slightly faster in terms of raw CPU instructions.
+
+
 ```csharp
 using System;
 
@@ -103,6 +108,40 @@ public class SlidingWindowExample
     }
 }
 ```
+
+### Using Single-Loop Fixed Window
+Keeps all array traversal inside one unified block of code, which can feel cleaner to read.
+
+```csharp
+public static int FindMaxSubarraySumSingleLoop(int[] arr, int k)
+{
+    if (arr.Length < k) return -1;
+
+    int maxSum = 0;
+    int windowSum = 0;
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        // 1. Add the new element entering the window on the right
+        windowSum += arr[i];
+
+        // 2. Once we pass index k-1, subtract the element leaving from the left
+        if (i >= k)
+        {
+            windowSum -= arr[i - k];
+        }
+
+        // 3. Once the first window is fully formed, start tracking the max
+        if (i >= k - 1)
+        {
+            maxSum = Math.Max(maxSum, windowSum);
+        }
+    }
+
+    return maxSum;
+}
+```
+
 
 ### Summary of Window Patterns
 - **Fixed-Size Window**: Needs no nested loops at all—just a single loop sliding a fixed range.
