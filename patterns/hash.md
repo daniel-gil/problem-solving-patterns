@@ -11,6 +11,9 @@ In C#, this pattern is implemented using `HashSet<T>` for tracking unique elemen
 
 
 ## C# Code Example: Two Sum
+
+**Problem**: Given an array of integers **NOT** sorted, find two numbers such that they add up to a specific target number.
+
 Here is how a Hash Map transforms an $O(N^2)$ brute-force search into an efficient $O(N)$ solution:
 
 ```csharp
