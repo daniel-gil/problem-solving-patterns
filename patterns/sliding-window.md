@@ -15,7 +15,51 @@ Imagine a window of a fixed or dynamic size moving from the left of an array to 
 - **Fixed Size**: The window length ($k$) remains constant. You add the new element and subtract the element that falls out of the left side.
 - **Dynamic Size**: The window grows or shrinks based on a specific condition (e.g., finding the longest substring with unique characters).
 
+## Code Example (C#): Dynamic Window
+Problem: Find the length of the longest substring without repeating characters.
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+public class DynamicWindowExample
+{
+    public static int LengthOfLongestSubstring(string s)
+    {
+        int maxLength = 0;
+        int left = 0;
+        HashSet<char> windowChars = new HashSet<char>();
+
+        // Outer loop controls the RIGHT pointer, expanding the window
+        for (int right = 0; right < s.Length; right++)
+        {
+            // Inner while loop controls the LEFT pointer, shrinking the window 
+            // if we encounter a duplicate character.
+            while (windowChars.Contains(s[right]))
+            {
+                windowChars.Remove(s[left]);
+                left++; // Shrink from the left
+            }
+
+            // Add the new character and update max length
+            windowChars.Add(s[right]);
+            maxLength = Math.Max(maxLength, right - left + 1);
+        }
+
+        return maxLength;
+    }
+
+    public static void Main()
+    {
+        string text = "abcabcbb";
+        Console.WriteLine($"Longest unique substring length: {LengthOfLongestSubstring(text)}"); 
+        // Output: 3 ("abc")
+    }
+}
+```
+
 ## Code Example (C#): Fixed-Size Window
+
 **Problem**: Find the maximum sum of any contiguous subarray of size $k$.
 
 ```csharp
@@ -59,6 +103,11 @@ public class SlidingWindowExample
     }
 }
 ```
+
+### Summary of Window Patterns
+- **Fixed-Size Window**: Needs no nested loops at all—just a single loop sliding a fixed range.
+- **Dynamic-Size Window**: Uses a for loop (right) combined with a nested while loop (left) to adjust bounds.
+
 
 ## When to Use It
 Look for these keywords and patterns in code challenges:
