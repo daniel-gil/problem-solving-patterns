@@ -8,7 +8,7 @@ Problem-solving patterns are reusable templates or strategies used to solve clas
 |     🥇 2 | **[Two Pointers](https://github.com/daniel-gil/problem-solving-patterns/tree/main/patterns/two-pointers.md)**                     | sorted array, pair, palindrome, compare from both ends               | O(n)                    |
 |     🥇 3 | **[Sliding Window](https://github.com/daniel-gil/problem-solving-patterns/tree/main/patterns/sliding-window.md)**                   | contiguous substring/subarray, longest/shortest, "at most K"         | O(n)                    |
 |     🥇 4 | **Binary Search**                    | sorted data, find position/boundary, minimum/maximum possible value  | O(log n) or O(n log n)  |
-|     🥇 5 | **Stack / Monotonic Stack**          | matching/nesting, next greater/smaller, previous greater/smaller     | O(n)                    |
+|     🥇 5 | **[Stack / Monotonic Stack](https://github.com/daniel-gil/problem-solving-patterns/blob/main/patterns/stack.md)**          | matching/nesting, next greater/smaller, previous greater/smaller     | O(n)                    |
 |     🥇 6 | **DFS / BFS**                        | explore connected nodes/cells, traversal, reachability               | O(V + E)                |
 |     🥇 7 | **Sorting + Greedy**                 | scheduling, maximize/minimize, make locally optimal decisions        | O(n log n)              |
 |     🥇 8 | **Intervals**                        | overlapping ranges, meetings, merging intervals                      | O(n log n)              |
