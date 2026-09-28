@@ -50,9 +50,11 @@ instead of brute-forcing in $O(n^2)$.
 - **Monotonic Decreasing Stack**: Keeps values in descending order (top of stack is the smallest). 
 Used for finding Next Greater Element.
 - **Monotonic Increasing Stack**: Keeps values in ascending order (top of stack is the largest). 
-Used for finding Next Smaller Element.Key Insight
+Used for finding Next Smaller Element.
 
-### Key Insight
+
+### Key Insight
+
 Store indices instead of values in the stack. Storing indices lets you calculate distances, 
 access original values via nums[index], and handle duplicates accurately.
 
