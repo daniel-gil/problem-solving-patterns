@@ -250,8 +250,8 @@ Heap | **Logarithmic Time:** Performance grows slowly, common in searching algo
 | O(n²) | Nested loops | **Quadratic Time:** Performance is proportional to the square of the input size (e.g., nested loops). |
 | O(2^n) |  | **Exponential Time:** Performance doubles with each addition to the input, becoming unusable for large . |
 
-<img width="1180" height="720" alt="image" src="https://github.com/user-attachments/assets/c0bdc57d-a0cd-40d5-af1d-f6965ec7e614" />
 
+<img width="1313" height="800" alt="image" src="https://github.com/user-attachments/assets/d59e1e63-55bf-4932-ab6e-e085628af0d2" />
 
 ### **O(1) Constant Time**
 
